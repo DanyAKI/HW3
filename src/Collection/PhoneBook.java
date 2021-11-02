@@ -2,19 +2,24 @@ package Collection;
 
 import java.util.*;
 
-public class PhoneBook {
-    private Map<String, Set<String>> note = new HashMap<>();
+class Directory {
+    private Map<String, List<String>> directory_hm = new HashMap<>();
+    private List<String> phone_number_list;
 
-    public void add(String name, String number){
-       note.getOrDefault(name, new HashSet<>()).add(number);
-
+    public void add(String surname, String phone_number) {
+        if (directory_hm.containsKey(surname)) {
+            phone_number_list = directory_hm.get(surname);
+            phone_number_list.add(phone_number);
+            directory_hm.put(surname, phone_number_list);
+        } else {
+            phone_number_list = new ArrayList<>();
+            phone_number_list.add(phone_number);
+            directory_hm.put(surname, phone_number_list);
+        }
     }
 
-    public Set<String> get(String name){
-        return note.getOrDefault(name, Collections.emptySet());
-
+    public List<String> get(String surname) {
+        return directory_hm.get(surname);
     }
-
-
 
 }

@@ -32,7 +32,7 @@ public class main {
 
 
     private static void task2(){
-        PhoneBook hm = new PhoneBook();
+        Directory hm = new Directory();
         hm.add("Ivanov", "+79256745674");
         hm.add("Alekseev", "+79264568361");
         hm.add("Katerov", "+79255467363");
@@ -41,6 +41,7 @@ public class main {
         hm.add("Ivanov", "+7925672833");
 
         System.out.println(hm.get("Ivanov"));
+        System.out.println();
 
 
     }
