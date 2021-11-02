@@ -33,13 +33,14 @@ public class main {
 
     private static void task2(){
         PhoneBook hm = new PhoneBook();
-        hm.add("Иванов", "+79256745674");
-        hm.add("Алексеев", "+79264568361");
-        hm.add("Катеров", "+79255467363");
-        hm.add("Никаноров", "+79268328443");
-        hm.add("Елкин", "+79258674629");
-        System.out.println(hm.get("+79258674629"));
-        System.out.println(hm.get("Катеров"));
+        hm.add("Ivanov", "+79256745674");
+        hm.add("Alekseev", "+79264568361");
+        hm.add("Katerov", "+79255467363");
+        hm.add("Nikonorov", "+79268328443");
+        hm.add("Elkin", "+79258674629");
+        hm.add("Ivanov", "+7925672833");
+
+        System.out.println(hm.get("Ivanov"));
 
 
     }
